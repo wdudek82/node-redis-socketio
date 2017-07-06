@@ -1,0 +1,25 @@
+help @<command> or \t
+help <command>
+
+SET key value
+GET key
+
+## hashmaps
+HMSET key field value [field value ...]
+HMGET key field [field ...]
+HGETALL key
+
+## lists
+# left push to array
+LPUSH key val
+RPUSH key val
+LRANGE key start stop
+
+## sets
+SADD key member [member ...]
+SMEMBERS key
+
+## sorted sets
+ZADD key timestamp value
+ZRANGE key start stop [WITHSCORES]
+ZREVRANGE key start stop [WITHSCORES]
