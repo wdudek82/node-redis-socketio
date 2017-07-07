@@ -23,3 +23,34 @@ SMEMBERS key
 ZADD key timestamp value
 ZRANGE key start stop [WITHSCORES]
 ZREVRANGE key start stop [WITHSCORES]
+
+
+## DATA STORAGE STRUCTURES
+## To create "relations" between records
+HMSET user:1 username josh gender male
+HMSET user:2 username chris gender female
+HMSET user:3 username chris2 gender male
+
+SADD name:josh user:1
+SADD name:chris user:2 user:3
+
+SADD gender:male user:1 user:3
+SADD gender:female user:2
+
+SMEMBERS gender:male
+>> 1) "user:1"
+>> 2) "user:3"
+
+# Joins
+SINTER names:chris gender:male
+>> 1) "user:3"
+
+# Select by timestamps
+ZADD logins 1499446610298 user:1
+ZADD logins 1499446912919 user:2
+ZADD logins 1499447539631 user:3
+
+ZRANGEBYSCORE 1499446912919 1499447539631 logins
+>> 1) user:2
+>> 2) user:3
+
