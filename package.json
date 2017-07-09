@@ -1,0 +1,24 @@
+{
+  "name": "node-redis-socketio",
+  "version": "1.0.0",
+  "description": "Created during Lynda.com tutorial:<br> \"Building Complex Express Sites with Redis and Socket.IO\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wdudek82/node-redis-socketio.git"
+  },
+  "keywords": [],
+  "author": "Wojciech Dudek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wdudek82/node-redis-socketio/issues"
+  },
+  "homepage": "https://github.com/wdudek82/node-redis-socketio#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "redis": "^2.7.1"
+  }
+}

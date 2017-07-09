@@ -54,3 +54,14 @@ ZRANGEBYSCORE 1499446912919 1499447539631 logins
 >> 1) user:2
 >> 2) user:3
 
+
+##########
+# Messages
+##########
+
+# subscribe
+SUBSCRIBE user:11
+PSUBSCRIBE user:*  # pattern subscribe
+
+# publish
+PUBLISH channer message
