@@ -9,6 +9,8 @@ app.get('/admin', (req, res) => {
 
     res.send(htmlTemplate);
     res.end();
+
+    console.log('hit!')
 });
 
 app.listen(process.argv[2] || 8080);
