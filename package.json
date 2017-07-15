@@ -19,6 +19,7 @@
   "homepage": "https://github.com/wdudek82/node-redis-socketio#readme",
   "dependencies": {
     "express": "^4.15.3",
-    "redis": "^2.7.1"
+    "redis": "^2.7.1",
+    "socket.io": "^2.0.3"
   }
 }

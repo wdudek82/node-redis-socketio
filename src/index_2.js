@@ -1,7 +1,8 @@
 const express = require('express');
 const redis = require('redis');
-const config = require('./config');
 const process = require('process');
+
+const config = require('./config');
 
 
 let app = express();
